@@ -1,38 +1,113 @@
-.App {
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url(https://wv-m13-demo.netlify.app/src/weather/bg.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: roboto, sans-serif;
+}
+
+.container {
+  /* background-image: url(https://wv-m13-demo.netlify.app/src/weather/bg.jpeg); */
   text-align: center;
+  width: 400px;
+  height: 500px;
+  border-radius: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#input {
+  margin: 30px 0 30px 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input {
+  width: 70%;
+  line-height: 40px;
+  border-radius: 15px 0 15px 0;
+  padding-left: 20px;
+  border: none;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 3px 3px 12px 3px rgba(0, 0, 0, 0.92);
+  font-size: 20px;
+  transition: 0.4s;
+  margin-bottom: 15px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+input:focus {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 0 15px 0 15px;
+}
+
+#input .error {
+  color: red;
+  font-weight: 700;
+}
+
+.loading {
+  color: #fff;
+  font-weight: 700;
+  font-size: 30px;
+}
+#weather-info {
+  margin-top: 20px;
+  color: #fff;
+}
+
+#capital {
+  margin-bottom: 30px;
+}
+
+.first-info {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+#weather {
+  font-size: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#weather .temp-1 {
+  background-color: royalblue;
+  font-weight: 700;
+  font-size: 90px;
+  text-shadow: 0px 7px 2px rgba(2, 8, 12, 0.93);
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#weather .clouds {
+  font-size: 20px;
+  font-weight: 700;
+  font-style: italic;
+  text-shadow: 0px 2px 2px rgba(2, 8, 12, 0.93);
+  padding-bottom: 20px;
+}
+
+#weather .temp-2 {
+  font-weight: 700;
+  text-shadow: 0px 2px 2px rgba(2, 8, 12, 0.93);
 }
