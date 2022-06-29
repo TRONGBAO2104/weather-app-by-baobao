@@ -71,26 +71,30 @@ function App() {
             <div className="loading">Loading...</div>
           ) : (
             <>
-              <div id="weather-info">
-                <div id="capital">
-                  <p className="first-info">
-                    <span>{cityInfo}, </span>
-                    <span>{capitalInfo}</span>
-                  </p>
-                  <p className="second-info">
-                    {new Date().toLocaleString("vi")}
-                  </p>
+              {errorMessage ? (
+                ""
+              ) : (
+                <div id="weather-info">
+                  <div id="capital">
+                    <p className="first-info">
+                      <span>{cityInfo}, </span>
+                      <span>{capitalInfo}</span>
+                    </p>
+                    <p className="second-info">
+                      {new Date().toLocaleString("vi")}
+                    </p>
+                  </div>
+                  <div id="weather">
+                    <p className="temp-1">{tempInfo}°C</p>
+                    <p className="clouds">
+                      {weatherInfo}: {weatherDescription}
+                    </p>
+                    <p className="temp-2">
+                      {tempMin}°c / {tempMax}°c
+                    </p>
+                  </div>
                 </div>
-                <div id="weather">
-                  <p className="temp-1">{tempInfo}°C</p>
-                  <p className="clouds">
-                    {weatherInfo}: {weatherDescription}
-                  </p>
-                  <p className="temp-2">
-                    {tempMin}°c / {tempMax}°c
-                  </p>
-                </div>
-              </div>
+              )}
             </>
           )}
         </>
