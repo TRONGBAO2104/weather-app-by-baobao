@@ -1,8 +1,8 @@
-#WEATHER APP
+# WEATHER APP
 
 **Demo App:** https://weather-app-by-baobao.netlify.app/
 
-**Source API:** https://openweathermap.org/
+**Source API call:** https://openweathermap.org/
 
 **Story:** I used to make this app using HTML&CSS for practice. After learning ReactJS, I thought why not reuse the app to practice ReactJS. So I rebuilt this app by adding React framework
 
