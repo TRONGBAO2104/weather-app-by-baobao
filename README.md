@@ -10,4 +10,4 @@
 - User search for city name and app will show city weather information
 - If user type wrong city name (eg hanoi2, clf...etc...), app shows "city not found"
 
-**Responsive web desing: Multiple screen sizes for Mobile, Tablet, PC
+**Responsive** web desing: Multiple screen sizes for Mobile, Tablet, PC
